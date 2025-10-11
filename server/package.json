@@ -4,18 +4,22 @@
   "description": "simple crud",
   "main": "server.js",
   "scripts": {
-    "start": "node dist/server.js",
+    "start": "tsc && node dist/server.js",
     "build": "tsc",
     "dev": "ts-node src/server.ts"
   },
   "author": "vengadesh raj",
   "license": "ISC",
   "devDependencies": {
+    "@types/express": "^5.0.3",
     "@types/node": "^24.7.1",
     "@typescript-eslint/eslint-plugin": "^8.46.0",
     "@typescript-eslint/parser": "^8.46.0",
     "eslint": "^9.37.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
   }
 }
