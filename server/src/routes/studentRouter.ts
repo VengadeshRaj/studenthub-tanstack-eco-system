@@ -5,7 +5,7 @@ import {
   domainListQuery,
   studentInfoQuery,
   studentListQuery,
-} from "../query/student";
+} from "../query/studentqueries";
 
 const router = express.Router();
 
