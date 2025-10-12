@@ -1,0 +1,80 @@
+{
+	"info": {
+		"_postman_id": "fb038476-2deb-4fc0-9f55-1cee900f4c79",
+		"name": "student",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29635668"
+	},
+	"item": [
+		{
+			"name": "GetStudentInfo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/student/info/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"student",
+						"info",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetStudentList",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/student/list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"student",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddStudent",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"student_name\": \"Surya Raj\",\r\n  \"domain_id\": 2,\r\n  \"date_of_birth\": \"2001-05-18\",\r\n  \"contact_info\": \"9876543210\",\r\n  \"email\": \"suryaraj@example.com\",\r\n  \"native_place\": \"Madurai\",\r\n  \"father_name\": \"Ravi Kumar\",\r\n  \"mother_name\": \"Anitha Devi\",\r\n  \"no_of_sibling\": 1,\r\n  \"date_of_joining\": \"2024-07-01\",\r\n  \"created_by\": \"admin\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/student/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"student",
+						"add"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
