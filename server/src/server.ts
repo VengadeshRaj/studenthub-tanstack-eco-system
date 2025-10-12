@@ -1,10 +1,14 @@
 import express from "express";
 import  studentRouter  from "./routes/studentRouter";
+import cors from "cors";
 
-const app = express();
 const PORT = process.env.PORT || 8080;
 
+const app = express();
+
 app.use(express.json());
+app.use(cors());
+
 
 app.use("/student", studentRouter);
 
