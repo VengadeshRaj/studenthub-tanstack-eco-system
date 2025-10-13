@@ -1,28 +1,31 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useStudentStore } from "../store/useStudentStore";
+import { useQuery } from "@tanstack/react-query";
+import { BASE_URL } from "../constants/constant";
 
 const StudentList = () => {
   const navigate = useNavigate();
-  const [studentList, setStudentList] = useState([]);
   const { addStudentInfo } = useStudentStore();
-  const baseUrl = "http://localhost:8080";
-
-  useEffect(() => {
-    getStudentList();
-  }, []);
 
   const getStudentList = async () => {
-    const response = await fetch(`${baseUrl}/student/list`);
-    if (response.ok) {
-      const result = await response.json();
-      console.log("data", result.data);
-      setStudentList(result.data);
-    }
+    const response = await fetch(`${BASE_URL}/student/list`);
+    const result = await response.json();
+    return result.data;
   };
 
+  const {
+    data: studentList = [],
+    isLoading,
+    isError,
+    error
+  } = useQuery({
+    queryKey: ["studentList"],
+    queryFn: getStudentList,
+  });
+
   const buildStudentTable = () =>
-    studentList.map((student: any, index) => (
+    studentList.map((student: any, index: string) => (
       <tr key={index}>
         <td onClick={() => navigate(`student/${student.studentId}/info`)}>
           {student.studentId}
@@ -44,7 +47,7 @@ const StudentList = () => {
           <th>Date of birth</th>
           <th>contact info</th>
         </thead>
-        <tbody>{buildStudentTable()}</tbody>
+        <tbody>{isLoading ? <h1>Loading... </h1> : buildStudentTable()}</tbody>
       </table>
       <button onClick={() => navigate("/student/add")}>Add new student</button>
     </div>
