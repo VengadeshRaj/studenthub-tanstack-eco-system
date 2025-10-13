@@ -71,32 +71,30 @@ router.get("/list", async (_, res: Response) => {
 
 router.post("/create", async (req: Request, res: Response) => {
   const {
-    student_name,
-    domain_id,
-    date_of_birth,
-    contact_info,
+    studentName,
+    domainRef,
+    dateOfBirth,
+    contactInfo,
     email,
-    native_place,
-    father_name,
-    mother_name,
-    no_of_sibling,
-    date_of_joining,
-    created_by,
+    nativePlace,
+    fatherName,
+    motherName,
+    noOfSibling,
+    dateOfJoining,
   } = req.body;
 
   try {
     await pool.query(addStudentQuery, [
-      student_name,
-      domain_id,
-      date_of_birth,
-      contact_info,
+      studentName,
+      domainRef,
+      dateOfBirth,
+      contactInfo,
       email,
-      native_place,
-      father_name,
-      mother_name,
-      no_of_sibling,
-      date_of_joining,
-      created_by,
+      nativePlace,
+      fatherName,
+      motherName,
+      noOfSibling,
+      dateOfJoining,
     ]);
 
     res.status(201).json({

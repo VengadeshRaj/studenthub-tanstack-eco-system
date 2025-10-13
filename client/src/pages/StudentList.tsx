@@ -22,6 +22,7 @@ const StudentList = () => {
   } = useQuery({
     queryKey: ["studentList"],
     queryFn: getStudentList,
+    staleTime:1000 * 60 *24
   });
 
   const buildStudentTable = () =>

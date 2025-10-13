@@ -24,7 +24,7 @@ const addStudentQuery = `INSERT INTO student (
         native_place, father_name, mother_name, no_of_sibling,
         date_of_joining, created_by, last_modified_by
       )
-      VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$11)`;
+      VALUES ($1,(select domain_id from domain where domain_ref = $2),$3,$4,$5,$6,$7,$8,$9,$10,'Admin','Admin')`;
 
 const domainListQuery = `select domain_ref as "domainRef",
 domain_name as "domainName" 
