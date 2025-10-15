@@ -7,7 +7,6 @@ import { BASE_URL } from "../constants/constant";
 const AddStudent = () => {
   const queryClient = useQueryClient();
   const navigate = useNavigate();
-  const { addStudentInfo } = useStudentStore();
   const [studentInfo, setStudentInfo] = useState({
     studentName: "",
     domainRef: "",
@@ -30,7 +29,7 @@ const AddStudent = () => {
     noOfSibling: false,
     dateOfJoining: false,
   });
-  const { data: domains, isLoading } = useQuery({
+  const { data: domains } = useQuery({
     queryFn: getDomains,
     queryKey: ["studentDomains"],
   });
