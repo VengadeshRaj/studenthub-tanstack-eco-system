@@ -15,6 +15,7 @@ This CRUD application is mainly focused to understand the features offered by **
 
 - **React JS** – Frontend library.
 - **TanStack Query (React Query)** – Server state management, caching, and data refetching.
+- **TanStack Form** - Handle form state management.
 - **Zustand** – State management.
 - **Tailwind CSS** – Utility-first CSS framework.
 
