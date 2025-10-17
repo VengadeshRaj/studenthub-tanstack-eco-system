@@ -3,8 +3,23 @@ import { useNavigate } from "react-router-dom";
 import { useStudentStore } from "../store/useStudentStore";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { BASE_URL } from "../constants/constant";
+import { useForm } from "@tanstack/react-form";
 
 const AddStudent = () => {
+  const studentForm = useForm({
+    defaultValues: {
+      studentName: "",
+      domainRef: "",
+      dob: "",
+      contactInfo: "",
+      email: "",
+      fatherName: "",
+      motherName: "",
+      noOfSibling: "",
+      dateOfJoining: "",
+    },
+    onSubmit:()=> addStudent
+  });
   const queryClient = useQueryClient();
   const navigate = useNavigate();
   const [studentInfo, setStudentInfo] = useState({
@@ -37,8 +52,9 @@ const AddStudent = () => {
     mutationFn: createStudent,
     mutationKey: ["createStudent"],
     onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: ['studentList'] });
-      navigate("/")},
+      queryClient.invalidateQueries({ queryKey: ["studentList"] });
+      navigate("/");
+    },
   });
 
   async function getDomains() {
