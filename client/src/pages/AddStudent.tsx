@@ -46,7 +46,9 @@ const AddStudent = () => {
     }),
     email: () => ({
       onChange: ({ value }: any) =>
-        !value ? "please provide email" : undefined,
+        !value ? "please provide email" : value.split('').includes('@') == false 
+          ? "please provide valid email"
+          : undefined,
     }),
     fatherName: () => ({
       onChange: ({ value }: any) =>
