@@ -1,4 +1,4 @@
-# Record Management CRUD App:
+# Record Management Application:
 
 This repository contains both the client-side and server-side code for a **Student Record Management** application. The application allows you to **view existing student records, add new students, and view detailed student information**. It is developed using **React JS** for the frontend and **Node JS** for the backend.
 
