@@ -1,8 +1,8 @@
-# Student Record Management CRUD Application:
+# Record Management CRUD App:
 
 This repository contains both the client-side and server-side code for a **Student Record Management** application. The application allows you to **view existing student records, add new students, and view detailed student information**. It is developed using **React JS** for the frontend and **Node JS** for the backend.
 
-This CRUD application is mainly focused to understand the features offered by **Tanstack Query** https://tanstack.com/query/latest
+This application is mainly focused to understand the features offered by **Tanstack Query** https://tanstack.com/query/latest
 
 ## Prerequisites:
 
@@ -33,7 +33,7 @@ This CRUD application is mainly focused to understand the features offered by **
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/VengadeshRaj/crud-tanstack-query.git    
+   https://github.com/VengadeshRaj/record-management-app-tanstack-eco-system.git    
 2. Install client dependencies:
     `cd client`
     `npm install`
