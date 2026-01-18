@@ -1,6 +1,6 @@
-# Record Management Application:
+# StudentHub:
 
-This repository contains both the client-side and server-side code for a **Student Record Management** application. The application allows you to **view existing student records, add new students, and view detailed student information**. It is developed using **React JS** for the frontend and **Node JS** for the backend.
+This repository contains both the client-side and server-side code for a **StudentHub** application. The application allows you to **view existing student records, add new students, and view detailed student information**. It is developed using **React JS** for the frontend and **Node JS** for the backend.
 
 This application is mainly focused to understand the features offered by **Tanstack Query** https://tanstack.com/query/latest
 
@@ -33,7 +33,7 @@ This application is mainly focused to understand the features offered by **Tanst
 
 1. Clone the repository:
    ```bash
-   https://github.com/VengadeshRaj/record-management-app-tanstack-eco-system.git    
+   https://github.com/VengadeshRaj/studenthub-tanstack-eco-system.git   
 2. Install client dependencies:
     `cd client`
     `npm install`
